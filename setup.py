@@ -45,7 +45,9 @@ setup(
     url=URL,
     packages=find_packages(exclude=["tests*"]),
     # package_dir={"": "src"},
-    entry_points={"console_scripts": ["check-jsonschema=pre_commit_hooks.check_jsonschema:main"]},
+    entry_points={
+        "console_scripts": ["check-jsonschema=pre_commit_hooks.check_jsonschema:main"]
+    },
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
@@ -59,7 +61,7 @@ setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
-        'Programming Language :: Python :: 3.8',
+        "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: Implementation :: CPython",
     ],
 )
