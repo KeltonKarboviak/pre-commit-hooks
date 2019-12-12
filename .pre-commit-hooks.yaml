@@ -1,0 +1,7 @@
+- id: check-jsonschema
+  name: Check JSON Schema
+  description: This hook checks JSON Schema files for parseable syntax.
+  language: python
+  entry: check-jsonschema
+  files: \.schema\.json$
+  types: [json]

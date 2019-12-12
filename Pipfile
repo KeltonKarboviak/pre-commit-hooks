@@ -1,0 +1,18 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[packages]
+pre-commit-hooks = {editable = true,path = "."}
+
+[dev-packages]
+bump2version = "*"
+pre-commit = "*"
+tox = "*"
+tox-pyenv = "*"
+tox-travis = "*"
+twine = "*"
+
+[requires]
+python_version = "3.7"

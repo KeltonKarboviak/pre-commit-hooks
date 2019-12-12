@@ -1,0 +1,26 @@
+dist: xenial # required for Python >= 3.7
+language: python
+python:
+  - 3.6
+  - 3.7
+  - 3.8
+  - 3.8-dev
+matrix:
+  allow_failures:
+    - python: 3.8-dev
+install:
+  - pip install -U pip pipenv
+  - pipenv install --dev --skip-lock
+script:
+  - tox
+  - pre-commit run --all-files
+# deploy:
+#   provider: pypi
+#   distributions: sdist bdist_wheel
+#   user: __token__
+#   password:
+#     secure: LoSixrYrORB4kjRETI7g3SthDhGbZvw8pj4w7nkCmIyilGTkGq/oW1Qj/ilXveKCaGu5lSlmJxygsgzxS6pCyNnHNd/LvdZQsKEb6I0SlqLbFsaxPigI54QX6+3xru2JaddeaFiXFE3oS8bRK9SxCA/u81o/PPG9CrImnBdTBoRAsP7L5Zk+qlQ/YDamDhgfC01BAJ1s6DGSXz0TJ7/2d3nKXT8VXL6827ClUujkTeyk+S6vfEs4V9LQpZcbzKebcUyqNz68oDz0XVHHlpSUTOOU+9dFN+Yr69oYVvYJ553RH9xAu2p3bcatv5smn5t1zDcJe6Dzqv21po62VYTbse2hOPHa10SXA8brmgW6JmCnlwFdyxH/8fxW1iKEjwSKAFfOZHVv7FhXHoc9Lay87LSCmiF5MYGyFxCiQ9tgaduzE2EpJjSn5k6xD98IXYHW38I+XVEl5woQEvPbm1IJyoQSFTO9z4MYzmZq42+2eNAy+jO9x8lAklx6w1cIs0qmdpvumLah4uu1vVqP/SRTsS1uuukPzsFI2gnWtsSSVH89ivmxMiX2kjB/VGB/YLxmlFrAf01ZidiOO8oZ+UmBWPNMUPuS1xnCkx4gbxsdAaLRkVER/a8P/EZ55+YSKpt+/j4JzEEfJyPm3idHT5t/0OY4ebycYwooLiJUmRphgbY=
+#   on:
+#     tags: true
+#     repo: KeltonKarboviak/pre-commit-hooks
+#     python: 3.7
