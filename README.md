@@ -37,5 +37,5 @@ See also: <https://github.com/pre-commit/pre-commit>
 [travis_img]: https://travis-ci.org/KeltonKarboviak/pre-commit-hooks.svg?branch=master
 [travis_ref]: https://travis-ci.org/KeltonKarboviak/pre-commit-hooks
 
-[version_img]: https://img.shields.io/static/v1.svg?label=pre-commit-hooks&message=v0.0.0&color=blue
+[version_img]: https://img.shields.io/static/v1.svg?label=pre-commit-hooks&message=v0.0.1&color=blue
 [version_ref]: https://pypi.org/project/pre-commit-hooks/
